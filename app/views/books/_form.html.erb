@@ -1,0 +1,14 @@
+<%= form_with model: book do |f| %> <!--モデル名が箱の名前、新規作成、アップデートに応じてローカル変数を指定-->
+  <div class="form-group">
+    <%= f.label :title %> <%# ビューで表示される際の名前（なんでも良い）#%>
+    <%= f.text_field :title, class: 'form-control book_title' %> <%# :カラム名(カラム名の前に:つける）　#%>
+  </div>
+  <div class="form-group">
+    <%= f.label :opinion %>　<%# ビューで表示される際の名前（なんでも良い）#%>
+    <%= f.text_area :body, class: 'form-control book_body' %> <%# カラム名　#%>
+  </div>
+  <div class="form-group">
+    <%= f.submit class: 'btn btn-success' %>
+  </div>
+  
+<% end %>
