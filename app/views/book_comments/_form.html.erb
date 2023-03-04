@@ -1,0 +1,10 @@
+ <div class="form-group">
+   <label for="newcomment">Comment</label>
+
+
+
+ <%= form_with(model:[book, book_comment]) do |f| %>
+  <%= f.text_area :comment, rows:'5',placeholder: "コメントをここに",class:"form-control" %>
+  <%= f.submit "送信する" %>
+ <% end %>
+ </div>
